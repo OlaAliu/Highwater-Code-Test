@@ -1,9 +1,9 @@
 
 
 ```markdown
-# E-Commerce Platform
+# HighWater Test Assessment
 
-An E-Commerce platform built with Laravel, Stripe, React, Laravel Breeze, and Laravel Sanctum, featuring role-based access control and email notifications.
+HighWater Test Assessment built with Laravel, Stripe, React, Laravel Breeze, and Laravel Sanctum, featuring role-based access control and email notifications.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ An E-Commerce platform built with Laravel, Stripe, React, Laravel Breeze, and La
 
 ## Overview
 
-This E-Commerce platform showcases a wide range of products, each categorized as either B2B (Business-to-Business) or B2C (Business-to-Consumer). Users can explore and purchase products with seamless authentication, role assignment, and payment processing. The platform utilizes Laravel Breeze for user authentication and Laravel Sanctum for API protection.
+This HighWater Test Assessment showcases a wide range of products, each categorized as either B2B (Business-to-Business) or B2C (Business-to-Consumer). Users can explore and purchase products with seamless authentication, role assignment, and payment processing. The platform utilizes Laravel Breeze for user authentication and Laravel Sanctum for API protection.
 
 
 
