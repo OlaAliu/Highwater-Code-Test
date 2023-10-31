@@ -1,0 +1,25 @@
+.active.navbar-item {
+    color: #1975d2;
+    font-weight: bolder;
+}
+
+.navbar {
+    --tw-shadow: 0 1px 20px rgba(0, 0, 0, .5);
+    --tw-shadow-colored: 0 1px 20px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.visible {
+    display: block !important;
+}
+
+.coloredButton {
+    width: 100%;
+    background-color: #1975d2;
+    border: 1px solid #1975d2;
+    border-radius: .5rem;
+    height: 44px;
+    color: white;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

@@ -1,0 +1,178 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.subContainer {
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.headerBox {
+    width: calc(100vw - 275px);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 35px;
+}
+
+.sideBox {
+    width: 275px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    padding: 10px;
+}
+
+.mainBox {
+    display: block;
+    flex-direction: column;
+    width: calc(100vw - 275px);
+    min-height: 100vh;
+    align-self: flex-end;
+    background-color: #eff3f4;
+}
+
+.subContainer.noSide>.sideBox {
+    display: none;
+}
+
+.subContainer.noSide>.mainBox {
+    width: 100vw;
+}
+
+.menuBar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-radius: 7px;
+    width: 35px;
+    height: 35px;
+    z-index: 1000;
+    display: none;
+}
+
+.searchBox {}
+
+.input {
+    border-radius: 25px 0 0 25px !important;
+}
+
+.btn {
+    border-radius: 0 25px 25px 0 !important;
+}
+
+.menuBox {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuEach {
+    /* background-color: rgb(0, 0, 0, 0.1); */
+    margin-bottom: 4px;
+    border-radius: 10px;
+}
+
+.menuLink {
+    color: #3a3f3b;
+    width: 100%;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.menuEach:hover {
+    color: black;
+    background-color: greenyellow;
+}
+
+.menuEach.active {
+    color: black;
+    background-color: greenyellow;
+}
+
+.menuIcon {
+    color: #3a3f3b;
+}
+
+.headerTitle {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.counter {
+    border-radius: 8px;
+    /* width: 100%; */
+    /* min-height: 100px; */
+    background-color: grey;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 0 35px;
+}
+
+.counterIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.dFlex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.counterNum {
+    text-align: center;
+    font-size: x-large;
+    color: black;
+}
+
+@media (max-width: 640px) {
+    .sideBox {
+        display: none !important;
+        background: white;
+    }
+
+    .subContainer.noSide>.sideBox {
+        display: block !important;
+    }
+
+    .mainBox {
+        width: 100vw;
+    }
+
+    .headerBox {
+        width: 100vw;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .counter {
+        width: 100%;
+        height: max-content;
+        margin-top: 25px;
+    }
+
+    .menuBar {
+        display: block;
+    }
+
+}

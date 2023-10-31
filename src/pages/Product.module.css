@@ -1,0 +1,107 @@
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 10px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 25%;
+}
+
+.products {
+    width: 70%;
+    margin: 15px;
+}
+
+.sidebarInner {
+    width: inherit;
+}
+
+.textCenter {
+    font-family: monospace;
+    font-size: small;
+    text-transform: uppercase;
+}
+
+.checkoutSection {
+    padding: 30px;
+}
+
+.flex {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputField {
+    width: 50%;
+}
+
+.coloredButton {
+    width: 40%;
+    background-color: #1975d2;
+    border: 1px solid #1975d2;
+    border-radius: .5rem;
+    height: 44px;
+    color: white;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.coloredButton:disabled {
+    opacity: 0.4;
+}
+
+@media (max-width: 640px) {
+    .productContainer {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        /* display: flex;
+        justify-content: center; */
+    }
+
+    .textCenter {
+        text-align: center;
+    }
+
+    .sidebarInner {
+        width: 50%;
+        display: flex;
+        height: max-content;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .products {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .inputField {
+        width: 100%;
+    }
+
+    .coloredButton {
+        width: 100%;
+    }
+}
