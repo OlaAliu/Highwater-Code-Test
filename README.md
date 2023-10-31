@@ -5,6 +5,9 @@
 
 An E-Commerce platform built with Laravel, Stripe, React, Laravel Breeze, and Laravel Sanctum, featuring role-based access control and email notifications.
 
+![Screenshot (97)](https://github.com/OlaAliu/Highwater-Code-Test/assets/149211531/bd7b0c62-6836-4a9b-95f7-cdc79e02bb59)
+
+
 ## Table of Contents
 
 1. [Overview](#overview)
