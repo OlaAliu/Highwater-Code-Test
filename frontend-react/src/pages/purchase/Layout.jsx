@@ -12,7 +12,7 @@ import { loadStripe } from "@stripe/stripe-js";
 // of fraud as customers browse your website.
 // Note: This is why we are adding it to a Layout component.
 
-const stripePromise = loadStripe(process.env.STRIPE_PK);
+const stripePromise = loadStripe(process.env.PUBLISHABLE_KEY);
 
 // TIP
 // call loadStripe outside of a component
