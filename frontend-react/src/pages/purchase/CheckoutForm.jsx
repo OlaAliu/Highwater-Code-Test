@@ -85,7 +85,7 @@ const CheckoutForm = ({ price, type, onSuccessfulCheckout }) => {
         'Content-Type': 'application/json',
       }
 
-      const { data: clientSecret } = await axios.post('https://text.thelikey.com/api/pays',
+      const { data: clientSecret } = await axios.post('http://127.0.0.1:8000/api/pays',
         data, {
         headers
       })

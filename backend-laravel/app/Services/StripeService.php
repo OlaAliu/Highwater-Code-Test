@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Mail;
 use App\Traits\ConsumesExternalServices;
-use App\Notifications\PaymentConfirmationEmail;
+   use App\Mail\PaymentConfirmationEmail;
 
 
 class StripeService
@@ -120,17 +120,20 @@ class StripeService
         if ($type === 'b2b') {
             // Assign 'b2b' role to the user
             $user->assignRole('b2b');
+                
+        Mail::to($user->email)->send(new PaymentConfirmationEmail($user,$value));
             $user->save();
         } elseif ($type === 'b2c') {
             // Assign 'b2c' role to the user
             $user->assignRole('b2c');
+             Mail::to($user->email)->send(new PaymentConfirmationEmail($user,$value));
             $user->save();
         }
-        // $emailContent = "Thank you for your payment. Your charge ID is: ";
-
-        // // Send an email to the user
-        // Mail::to($user->email)->send(new PaymentConfirmationEmail($emailContent));
         
+         Mail::to($user->email)->send(new PaymentConfirmationEmail($user,$value));
+    
+  
+
         $paymentIntent= $this->makeRequest(
             'POST',
             '/v1/payment_intents',
@@ -147,9 +150,12 @@ class StripeService
          // Check if the payment intent was created successfully
     if ($paymentIntent->status === 'succeeded') {
         // Payment intent was successful, send an email to the user
+        
+        
         $amount = $paymentIntent->latest_charge;
 
        // Send an email to the user
+       
         Mail::to($user->email)->send(new PaymentConfirmationEmail($user,$amount));
 
         return $paymentIntent;
