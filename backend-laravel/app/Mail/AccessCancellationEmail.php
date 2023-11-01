@@ -7,22 +7,22 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class PaymentConfirmationEmail extends Mailable
+class AccessCancellationEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $user;
-    public $amount;
+    // public $amount;
 
-    public function __construct($user, $amount)
+    public function __construct($user)
     {
         $this->user = $user;
-        $this->amount = $amount;
+        // $this->amount = $amount;
     }
 
     public function build()
     {
-        return $this->view('emails.payment_confirmation')
-            ->subject('Payment Confirmation');
+        return $this->view('emails.access_cancellation')
+            ->subject('Access Cancellation');
     }
 }

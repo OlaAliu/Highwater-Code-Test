@@ -1,5 +1,3 @@
-
-
 ```markdown
 # HighWater Test Assessment
 
@@ -42,18 +40,25 @@ This HighWater Test Assessment showcases a wide range of products, each categori
 
 To run this project locally, follow these steps:
 
+
+   ```
+
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/your/repository.git
+
    cd your-repository
+
    ```
 
 2. Install project dependencies:
 
    ```bash
-   composer install
-   npm install
+   composer install for laravel backend
+   
+   npm install for react frontend
+  
    ```
 
 3. Create a `.env` file and set your environment variables, including Stripe API keys and database configurations.
@@ -79,12 +84,24 @@ To run this project locally, follow these steps:
 7. Start the development server:
 
    ```bash
-   php artisan serve
+   php artisan serve for laravel backend
+    
+   nmp start for react frontend
    ```
 
-The project should now be accessible at `http://localhost:8000`.
+The project should now be accessible at `http://localhost:8000` or 127.0.0.1:8000 for laravel backend.
+
+The project should now be accessible at `http://localhost:3000` or 127.0.0.1:3000 for react frontend.
 
 ## Usage
+
+### Admin Login Details
+email: admin@gmail.com
+password: password
+
+## User Login Detail
+email: b2b@gmail.com
+password: password
 
 ### Product Purchase
 
@@ -142,5 +159,5 @@ Comprehensive testing is implemented to ensure code reliability. Unit tests and 
 ## Security Considerations
 
 This project focuses on security best practices, including robust user input validation, strict authorization controls, and data encryption. Sensitive data such as credit card information is handled securely.
-```
+
 

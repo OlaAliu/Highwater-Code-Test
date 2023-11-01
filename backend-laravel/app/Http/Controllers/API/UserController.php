@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Mail;
+   use App\Mail\AccessCancellationEmail;
+
 class UserController extends Controller
 {
     
@@ -83,11 +86,13 @@ class UserController extends Controller
 
 
         $user = User::find($id);
+        $username=$user->name;
 
         if ($user) {
             $user->status = 0;
             $user->update();
 
+  Mail::to($user->email)->send(new AccessCancellationEmail($user));
             return response()->json([
                 'error' => 'User Access Revoked'
             ]);
