@@ -3,9 +3,6 @@
 
 HighWater Test Assessment built with Laravel, Stripe, React, Laravel Breeze, and Laravel Sanctum, featuring role-based access control and email notifications.
 
-## Admin Login details
-Email: admin@gmail.com
-Password: password
 
 ## Table of Contents
 
